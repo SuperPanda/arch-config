@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/panda/Desktop/gdrive/UWA/2013-SEM2/CITS1002/week-08'
-let g:netrw_dirhist_2='/home/panda/.xmonad'
