@@ -1,0 +1,38 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+export EDITOR="nano"
+export IPOD_MOUNTPOINT="/run/media/panda/PANDABEAR"
+function datediff {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo $(( (d1 - d2) / 86400 )) days
+}
+export -f datediff
+function unix2dos { awk 'sub("$", "\r")' "$1" > "$2"; }
+export -f unix2dos
+alias home-init="~/.screenlayout/newhome.sh; ~/scripts/change-wallpaper.sh"
+alias change-background="~/scripts/change-wallpaper.sh"
+alias conf-xmonad="gvim ~/.xmonad/xmonad.hs"
+alias gsync="grive -p /home/panda/Desktop/gdrive"
+alias android-connect="mtpfs -o allow_other /media/tablet"
+alias android-disconnect="fusermount -u /media/tablet"
+alias music="vlc ~/Music/*"
+alias eebook-link="mv ~/Downloads/URLLink.acsm ~/cracker/links"
+alias eebook-mv="mv ~/cracker/output/*"
+alias youtube-dl='youtube-dl -o "%(title)s.%(ext)s" --restrict-filenames'
+alias start-conky="conky -c ~/.conkyrc1 & conky -c ~/.conkyrc2"
+alias stop-conky="pkill conky"
+alias ls='ls --color=auto'
+alias lstar="tar -ztvf"
+alias untar="tar -zxvf"
+alias pacman-get="sudo pacman -S"
+alias search="pacman -Ss"
+alias update="sudo pacman -Syu"
+alias mygcc="gcc -std=c99 -Wall -Werror -pedantic"
+alias cdsnips="cd /home/panda/.vim/MySnips/"
+export _JAVA_AWT_WM_NONREPARENTING=1
+PS1='[\u@\h \W]\$ '
