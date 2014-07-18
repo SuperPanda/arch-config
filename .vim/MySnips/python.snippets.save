@@ -1,0 +1,4 @@
+snippet initList
+[${1:0} for ${2:x} in ${3:range(listSize)}]${0}
+endsnippet
+

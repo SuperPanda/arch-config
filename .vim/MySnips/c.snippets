@@ -1,0 +1,29 @@
+snippet	fileio
+FILE *${1:file_p};
+$1 = fopen(${2:FILENAME},"${3:rwa+}");
+if ($1 == NULL){
+	printf("Cannot open '%s'", $2);
+	exit(EXIT_FAILURE);
+}
+${0://Do stuff with data}
+fclose($1);
+endsnippet
+
+snippet linebuf
+char line[BUFSIZ];
+endsnippet
+
+snippet fgets
+char line[BUFSIZE];
+while(fgets(line,sizeof line, ${1:file_ptr})!=NULL){
+	${0://Do something}
+}
+endsnippet
+
+snippet fputs
+fputs(line,${1:file_ptr})
+endsnippet
+
+snippet ?
+printf("DEBUG POINT ${1:i}\n");
+endsnippet
