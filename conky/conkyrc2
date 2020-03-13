@@ -82,7 +82,7 @@ gap_x = 74,
 gap_y = 8,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
-use_spacer = "right",
+use_spacer = "none",
 
 -- Subtract file system buffers from used memory?
 no_buffers = true,
@@ -201,10 +201,10 @@ uppercase = false
 -- ${font Perry:size=10}Including UTF-8,
 -- ${font Luxi Mono:size=10}justo como este texto que o google traduz f????z o portugu????s
 -- stuff after 'TEXT' will be formatted on screen
+-- ${voffset 12}${alignc}${color #00ff00}${time %a %d-%b}${color #00ff00}${time %k:%M:%S}
 conky.text = [[
 ${alignc}${color white}[${color green}panda${color}@${color red}$nodename${color white}]
-${voffset 12}${alignc}${color #00ff00}${time %a %d-%b}${color #00ff00}${time %k:%M:%S}
-${voffset 8}${alignc}${color #888888}$sysname $kernel ${color #CCCCCC}on ${color #888888}$machine
+${voffset 12}${alignc}${color #888888}$sysname $kernel ${color #CCCCCC}on ${color #888888}$machine
 ${voffset 0}${alignc}${color #888888}Uptime: $uptime
 
 ${color #ffccaa}Monitors${hr 1}
