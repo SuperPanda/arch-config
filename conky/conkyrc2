@@ -17,7 +17,7 @@ double_buffer = true,
 
 -- Use Xft?
 use_xft = true,
-
+-- Test
 -- Xft font when Xft is enabled
 -- xftfont = "monospace-8",
 own_window = true,

@@ -13,7 +13,7 @@ own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager,below",
 xftalpha = 0.8,
 own_window_class = "Conky",
 -- on_bottom yes
-
+-- test
 -- mail spool
 -- mail_spool $MAIL
 
