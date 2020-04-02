@@ -1,6 +1,6 @@
 conky.config = {
 -- set to yes if you want Conky to be forked in the background
-background = false,
+background = true,
 use_xft = true,
 -- Xft font when Xft is enabled
 -- xftfont monospace-8
@@ -29,7 +29,6 @@ double_buffer = true,
 -- Minimum size of text area
 minimum_width = 5,
 minimum_height = 5,
-maximum_width = 400,
 
 -- Draw shades?
 draw_shades = true,
@@ -62,8 +61,8 @@ alignment = "top_right",
 -- alignment bottom_middle
 -- Gap between borders of screen and text
 
-gap_x = 420,
-gap_y = 200,
+gap_x = 378,
+gap_y = 78,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",
@@ -77,7 +76,7 @@ uppercase = false
 -- ${font DejaVu Sans Mono :size=12}${exec cal -m | cut -c23-44 --complement}
 -- ${execi 3600 calcurse -a -r 7 --read-only -i ~/UWA-2013-SEM2.ics}
 conky.text = [[
-${color 00ff00}${font DejaVu Sans Mono:size=24}${alignc}${time %k:%M:%S}
-${alignc}${time %a %d-%b %Y}
-${voffset 48}${alignc}${color orange}${font DejaVu Sans Mono:size=16}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color #6666FF}'"$DJS"'$color'/}
+${color 00ff00}${font DejaVu Sans Mono:size=36}${alignc}${time %k:%M:%S}
+${color 00ff00}${font DejaVu Sans Mono:size=24}${alignc}${time %a %d-%b %Y}
+${voffset 48}${alignc}${color orange}${font DejaVu Sans Mono:size=20}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color #6666FF}'"$DJS"'$color'/}
 ]]

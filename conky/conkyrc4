@@ -1,8 +1,6 @@
 conky.config = {
 -- set to yes if you want Conky to be forked in the background
 background = true,
-cpu_avg_samples = 2,
-net_avg_samples = 2,
 out_to_console = false,
 double_buffer = true,
 -- X font when Xft is disabled, you can pick one with program xfontsel
@@ -35,17 +33,8 @@ own_window_class = "Conky",
 -- Update interval in seconds
 update_interval = 1,
 
--- Create own window instead of using desktop (required in nautilus)
--- own_window = false,
-
--- Use double buffering (reduces flicker, may not work for everyone)
--- double_buffer = true,
--- no_buffers = true,
-
--- Minimum size of text area
 minimum_width = 5,
 minimum_height = 5,
--- maximum_width = 150,
 
 -- Draw shades?
 draw_shades = true,
@@ -54,7 +43,7 @@ draw_shades = true,
 draw_outline = true,
 
 -- Draw borders around text
-draw_borders = true,
+draw_borders = false,
 
 -- Stippled borders?
 stippled_borders = 0,
@@ -74,12 +63,12 @@ default_outline_color = "black",
 -- alignment top_left
 -- alignment top_right
 -- alignment bottom_left
-alignment = "top_left",
+alignment = "bottom_right",
 
 -- Gap between borders of screen and text
 
-gap_x = 74,
-gap_y = 8,
+gap_x = 320,
+gap_y = 48,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",
@@ -192,53 +181,8 @@ uppercase = false
 -- seti_progbar      (height)        Seti@home current progress bar
 -- seti_credit                       Seti@hoome total user credit
 
-
--- variable is given either in format $variable or in ${variable}. Latter
--- allows characters right after the variable and must be used in network
--- stuff because of an argument
--- ${font Dungeon:style=Bold:pixelsize=10}I can change the font as well
--- ${font Verdana:size=10}as many times as I choose
--- ${font Perry:size=10}Including UTF-8,
--- ${font Luxi Mono:size=10}justo como este texto que o google traduz f????z o portugu????s
--- stuff after 'TEXT' will be formatted on screen
--- ${voffset 12}${alignc}${color #00ff00}${time %a %d-%b}${color #00ff00}${time %k:%M:%S}
 conky.text = [[
-${alignc}${color white}[${color green}panda${color}@${color red}$nodename${color white}]
-${voffset 12}${alignc}${color #888888}$sysname $kernel ${color #CCCCCC}on ${color #888888}$machine
-${voffset 0}${alignc}${color #888888}Uptime: $uptime
-
-${color #ffccaa}Monitors${hr 1}
-${color #888888}cpu: ${color #CCCCCC}${cpu}%
-${color #888888}${cpugraph 25 ff0000 ff00ff}i
+${font Dungeon:style=Bold:pixelsize=32}
+${color #00ff00}${membar 100 ff0000 ff00ff}
 ${color #888888}ram : ${color #CCCCCC}$mem${color #888888}/${color #CCCCCC}$memmax ${color #888888}- ${color #CCCCCC}$memperc%
-${color #888888}swap: ${color #CCCCCC}$swap${color #888888}/${color #CCCCCC}$swapmax ${color #888888}   - ${color #CCCCCC}$swapperc%
-${color #888888}load: ( ${color #CCCCCC}$loadavg ${color #888888})
-${color #888888}processes: ${color #CCCCCC}$processes	${color #888888}running: ${color #CCCCCC}$running_processes
-
-${voffset -8}${color #ffccaa}Processor Usage${hr 1}
-${color #CCCCCC}Running${goto 160}PID${goto 200}CPU%${goto 260}MEM%
-${color #ddaa00} ${top name 1}${goto 150}${top pid 1}${goto 200}${top cpu 1}${goto 260}${top mem 1}
-${color #888888} ${top name 2}${goto 150}${top pid 2}${goto 200}${top cpu 2}${goto 260}${top mem 2}
-${color #888888} ${top name 3}${goto 150}${top pid 3}${goto 200}${top cpu 3}${goto 260}${top mem 3}
-${color #888888} ${top name 4}${goto 150}${top pid 4}${goto 200}${top cpu 4}${goto 260}${top mem 4}
-${color #888888} ${top name 5}${goto 150}${top pid 5}${goto 200}${top cpu 5}${goto 260}${top mem 5}
-
-${voffset -8}${color #ffccaa}Available Space${hr 1}
-${color #888888}root: ${color #CCCCCC}${fs_used /}${color #888888}/${color #CCCCCC}${fs_size /} ${color 
-#888888}(${color 
-#CCCCCC}${fs_free /} ${fs_free_perc /}% ${color #888888} free)
-       ${fs_bar /}
-${color #888888}boot: ${color #CCCCCC}${fs_used /boot}${color #888888}/${color #CCCCCC}${fs_size /boot} ${color #888888}(${color #CCCCCC}${fs_free /boot} ${fs_free_perc /boot}% ${color #888888} free)
-       ${fs_bar /boot}
-
-${voffset -8}${color #ffccaa}Network${hr 1}
-${voffset 4}${color #CCCCCC}Interface ${color #6666FF}wlp9s0 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr wlp9s0}
-${voffset 4}${color #888888}${downspeedgraph wlp9s0 15,128 0000ff ff0000}${alignr}${color #888888}${upspeedgraph wlp9s0 15,128 0000ff ff0000}
-${color #888888}DOWN: ${color #CCCCCC}${downspeed wlp9s0}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed wlp9s0}/s
-${color #888888}TOTAL: ${color #CCCCCC}${totaldown wlp9s0}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup wlp9s0}
-${voffset -8}${hr 1}
-${voffset 4}${color #CCCCCC}Interface ${color #6666FF}enp5s0 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr enp5s0}
-${voffset 4}${color #888888}${downspeedgraph enp5s0 15,128 0000ff ff0000}${color #888888}${alignr}${upspeedgraph enp5s0 15,128 0000ff ff0000}
-${color #888888}DOWN: ${color #CCCCCC}${downspeed enp5s0}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed enp5s0}/s
-${color #888888}TOTAL: ${color #CCCCCC}${totaldown enp5s0}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup enp5s0}
 ]]
