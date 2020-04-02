@@ -182,7 +182,7 @@ uppercase = false
 -- seti_credit                       Seti@hoome total user credit
 
 conky.text = [[
-${font Dungeon:style=Bold:pixelsize=32}
-${color #00ff00}${membar 100 ff0000 ff00ff}
+${voffset -10}${alignc}Vol: ${execpi 1 pactl list sinks | grep 'Sink #0' -A 10 | grep Volume | cut -d " " -f6 }${font Dungeon:style=Bold:pixelsize=32}
+${color #00ff00}${membar 75 ff0000 ff00ff}
 ${color #888888}ram : ${color #CCCCCC}$mem${color #888888}/${color #CCCCCC}$memmax ${color #888888}- ${color #CCCCCC}$memperc%
 ]]
