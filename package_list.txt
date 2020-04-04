@@ -67,6 +67,7 @@ texinfo 6.7-2
 tinyssh 20190101-2
 tmux 3.0_a-1
 ttf-dejavu 2.37-2
+vagrant 2.2.7-3
 vi 1:070224-4
 vim 8.2.0343-1
 virt-manager 2.2.1-2

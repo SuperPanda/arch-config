@@ -39,4 +39,8 @@ pacman -U <the-package.tar.xz>
 ## TODO
 - ddns / reverse-ssh + auto-connect to net with dhcp without timing out if its not connected
 - rsync usbs
-- hdmi audio
+- hdmi audio - how did i fix this?
+
+# Vagrant
+vagrant plugin install vagrant-libvirt
+vagrant up --provider=libvirt
