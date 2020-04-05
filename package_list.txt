@@ -1,5 +1,5 @@
 alsa-utils 1.2.2-1
-amd-ucode 20200224.efcfa03-1
+amd-ucode 20200316.8eb0b28-1
 arandr 0.1.10-4
 autoconf 2.69-7
 automake 1.16.2-1
@@ -7,6 +7,7 @@ base 2-2
 binutils 2.34-2
 bison 3.5.3-1
 bridge-utils 1.6-4
+chromium 80.0.3987.163-1
 conky 1.11.5-2
 dhclient 4.4.2-2
 dhcpcd 8.1.6-1
@@ -18,9 +19,9 @@ expac 10-1
 fakeroot 1.24-2
 fd 7.5.0-1
 feh 3.3-2
-firefox 74.0-2
+firefox 74.0.1-1
 flex 2.6.4-3
-fzf 0.21.0.1-1
+fzf 0.21.1-1
 gcc 9.3.0-1
 git 2.26.0-1
 gnuplot 5.2.8-1
@@ -36,7 +37,7 @@ intel-ucode 20191115-3
 jupyter-notebook 6.0.3-1
 leafpad 0.8.18.1-8
 linux 5.5.13.arch2-1
-linux-firmware 20200224.efcfa03-1
+linux-firmware 20200316.8eb0b28-1
 lvm2 2.02.187-1
 m4 1.4.18-3
 make 4.3-1
@@ -69,7 +70,7 @@ tmux 3.0_a-1
 ttf-dejavu 2.37-2
 vagrant 2.2.7-3
 vi 1:070224-4
-vim 8.2.0343-1
+vim 8.2.0510-1
 virt-manager 2.2.1-2
 vlc 3.0.8-11
 wget 1.20.3-2
