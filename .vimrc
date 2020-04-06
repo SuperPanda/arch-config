@@ -1,10 +1,28 @@
 " https://bluz71.github.io/2017/05/21/vim-plugins-i-like.html
 set rtp+=/usr/bin/fzf
+set autoread
 map <C-n> :NERDTreeToggle<CR>
 map <C-_> :FZF<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 noremap <silent> <Leader>f :NERDTreeFind<CR> <C-w>=
+let g:ale_linters = {
+            \ 'javascript:': ['eslint'],
+            \ 'typescript': ['tsserver', 'eslint'],
+            \ }
+let g:ale_fixers = {
+            \ 'javascript:': ['eslint'],
+            \ 'typescript': ['eslint'],
+            \ }
+autocmd FileType typescript setlocal completeopt+=menu,preview
+
+let g:ale_typescript_eslint_executable = "$(npm bin)/eslint"
+let g:ale_typescript_tsserver_executable = "$(npm bin)/tsserver"
+let g:ale_close_preview_on_insert = 1
+let g:ale_open_list = 5
+let g:ale_fix_on_save = 1
+let g:ale_enabled = 1
+let g:ale_list_window_size = 5
 let g:indentLine_faster     = 1
 let g:indentLine_setConceal = 0
 let g:NERDTreeDirArrowExpandable  = "▷"
