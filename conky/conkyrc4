@@ -20,21 +20,20 @@ use_xft = true,
 -- xftfont = "monospace-8",
 own_window = true,
 own_window_type = "override",
-own_window_transparent = true, 
-own_window_colour = "black",
-own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager,below",
+own_window_transparent = false, 
+-- own_window_colour = "black",
+own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager",
 -- Text alpha when using Xft
-xftalpha = 0.8,
+-- xftalpha = 0.8,
+own_window_argb_visual = true,
+own_window_argb_value = 100,
 own_window_class = "Conky",
-
--- mail spool
--- mail_spool = "$MAIL",
 
 -- Update interval in seconds
 update_interval = 1,
 
 minimum_width = 5,
-minimum_height = 5,
+minimum_height = 128,
 
 -- Draw shades?
 draw_shades = true,
@@ -44,7 +43,8 @@ draw_outline = true,
 
 -- Draw borders around text
 draw_borders = false,
-
+border_inner_margin = 16,
+border_outer_margin = 0,
 -- Stippled borders?
 stippled_borders = 0,
 
@@ -68,7 +68,7 @@ alignment = "bottom_right",
 -- Gap between borders of screen and text
 
 gap_x = 320,
-gap_y = 48,
+gap_y = 16,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",
@@ -181,8 +181,10 @@ uppercase = false
 -- seti_progbar      (height)        Seti@home current progress bar
 -- seti_credit                       Seti@hoome total user credit
 
+-- ${alignc}Volume: ${execpi 1 pactl list sinks | grep 'Sink #0' -A 10 | grep Volume | cut -d " " -f6 | sed  's/\//100\%/' | awk -v def="0%" "{print} END {IF(NR==0){print def}}" }${font Dungeon:style=Bold:pixelsize=32}
 conky.text = [[
-${voffset -10}${alignc}Vol: ${execpi 1 pactl list sinks | grep 'Sink #0' -A 10 | grep Volume | cut -d " " -f6 }${font Dungeon:style=Bold:pixelsize=32}
+${alignc}Volume: ${execpi 1 pactl list sinks | grep 'Sink #0' -A 10 | grep Volume | cut -d " " -f5,6 | sed 's/[\/\w\t\ ]*//g' | sed 's/[\/\w\ \t]*//' | sed 's/^$/0%/'}${font Dungeon:style=Bold:pixelsize=32}
+${alignc}${execpi 1 pacmd list-sinks 0 | grep muted | grep no | sed 's/[\ \w\t]*muted:\ no[\w\t]*/Active/' | awk -v def="Muted" 'END{print NR?$0:"Muted"}' }${font Dungeon:style=Bold:pixelsize=32}
+${voffset 10}${color #888888}ram : ${color #CCCCCC}$mem${color #888888}/${color #CCCCCC}$memmax ${color #888888} ${alignr}${color #CCCCCC}$memperc%
 ${color #00ff00}${membar 75 ff0000 ff00ff}
-${color #888888}ram : ${color #CCCCCC}$mem${color #888888}/${color #CCCCCC}$memmax ${color #888888}- ${color #CCCCCC}$memperc%
 ]]

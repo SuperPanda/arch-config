@@ -22,9 +22,12 @@ use_xft = true,
 -- xftfont = "monospace-8",
 own_window = true,
 own_window_type = "override",
-own_window_transparent = true, 
-own_window_colour = "black",
-own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager,below",
+own_window_transparent = false, 
+own_window_argb_visual = true,
+own_window_argb_value = 178,
+
+-- own_window_colour = "black",
+-- own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager,below",
 -- Text alpha when using Xft
 xftalpha = 0.8,
 own_window_class = "Conky",
@@ -54,7 +57,7 @@ draw_shades = true,
 draw_outline = true,
 
 -- Draw borders around text
-draw_borders = true,
+draw_borders = false,
 
 -- Stippled borders?
 stippled_borders = 0,
@@ -64,8 +67,10 @@ stippled_borders = 0,
 
 -- border width
 border_width = 1,
-
+border_inner_margin = 16,
+border_outer_margin = 16,
 -- Default colors and also border colors
+-- default_color = "orange",
 default_color = "orange",
 default_shade_color = "white", 
 default_outline_color = "black",
@@ -78,8 +83,8 @@ alignment = "top_left",
 
 -- Gap between borders of screen and text
 
-gap_x = 74,
-gap_y = 8,
+gap_x = 32,
+gap_y = 32,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",
