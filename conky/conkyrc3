@@ -20,7 +20,7 @@ update_interval = 1,
 double_buffer = true,
 
 -- Minimum size of text area
-minimum_width = 256,
+minimum_width = 300,
 minimum_height = 5,
 border_outer_margin = 16,
 border_inner_margin = 32,
@@ -48,13 +48,13 @@ default_outline_color = "black",
 
 -- Text alignment, other possible values are commented
 -- alignment top_left
-alignment = "top_right",
+alignment = "top_left",
 -- alignment bottom_left
 -- alignment bottom_right
 -- alignment bottom_middle
 -- Gap between borders of screen and text
 
-gap_x = 400,
+gap_x = 668,
 gap_y = 64,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
