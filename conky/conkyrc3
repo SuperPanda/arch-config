@@ -72,5 +72,5 @@ uppercase = false
 conky.text = [[
 ${color 00ff00}${font DejaVu Sans Mono:size=36}${alignc}${time %k:%M:%S}
 ${color 00ff00}${font DejaVu Sans Mono:size=24}${alignc}${time %a %d-%b %Y}
-${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/" $DJS"/'${color #6666FF}'" $DJS"'${color orange}'/}${voffset -24}
+${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"/'${color #6666FF}'"$DJS"'${color orange}'/}${voffset -24}
 ]]
