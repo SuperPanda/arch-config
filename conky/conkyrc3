@@ -68,8 +68,9 @@ uppercase = false
 }
 -- ${font DejaVu Sans Mono :size=12}${exec cal -m | cut -c23-44 --complement}
 -- ${execi 3600 calcurse -a -r 7 --read-only -i ~/UWA-2013-SEM2.ics}
+--${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color #6666FF}'"$DJS"'$color'/}${voffset -24}
 conky.text = [[
 ${color 00ff00}${font DejaVu Sans Mono:size=36}${alignc}${time %k:%M:%S}
 ${color 00ff00}${font DejaVu Sans Mono:size=24}${alignc}${time %a %d-%b %Y}
-${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color #6666FF}'"$DJS"'$color'/}${voffset -24}
+${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/" $DJS"/'${color #6666FF}'" $DJS"'${color orange}'/}${voffset -24}
 ]]

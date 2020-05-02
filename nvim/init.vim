@@ -34,7 +34,7 @@ if (has("termguicolors"))
 endif
 syntax enable
 colorscheme dracula
-
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:gitgutter_grep                    = 'rg'
 let g:gitgutter_map_keys                = 0
 let g:gitgutter_sign_added              = '▎'
