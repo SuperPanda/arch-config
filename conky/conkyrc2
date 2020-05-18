@@ -83,8 +83,8 @@ alignment = "top_left",
 
 -- Gap between borders of screen and text
 
-gap_x = 32,
-gap_y = 32,
+gap_x = 64,
+gap_y = 64,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",
@@ -237,13 +237,13 @@ ${color #888888}boot: ${color #CCCCCC}${fs_used /boot}${color #888888}/${color #
        ${fs_bar /boot}
 
 ${voffset -8}${color #ffccaa}Network${hr 1}
-${voffset 4}${color #CCCCCC}Interface ${color #6666FF}wlp9s0 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr wlp9s0}
-${voffset 4}${color #888888}${downspeedgraph wlp9s0 15,128 0000ff ff0000}${alignr}${color #888888}${upspeedgraph wlp9s0 15,128 0000ff ff0000}
-${color #888888}DOWN: ${color #CCCCCC}${downspeed wlp9s0}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed wlp9s0}/s
-${color #888888}TOTAL: ${color #CCCCCC}${totaldown wlp9s0}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup wlp9s0}
+${voffset 4}${color #CCCCCC}Interface ${color #6666FF}wlo1 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr wlo1}
+${voffset 4}${color #888888}${downspeedgraph wlo1 15,128 0000ff ff0000}${alignr}${color #888888}${upspeedgraph wlo1 15,128 0000ff ff0000}
+${color #888888}DOWN: ${color #CCCCCC}${downspeed wlo1}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed wlo1}/s
+${color #888888}TOTAL: ${color #CCCCCC}${totaldown wlo1}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup wlo1}
 ${voffset -8}${hr 1}
-${voffset 4}${color #CCCCCC}Interface ${color #6666FF}enp5s0 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr enp5s0}
-${voffset 4}${color #888888}${downspeedgraph enp5s0 15,128 0000ff ff0000}${color #888888}${alignr}${upspeedgraph enp5s0 15,128 0000ff ff0000}
-${color #888888}DOWN: ${color #CCCCCC}${downspeed enp5s0}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed enp5s0}/s
-${color #888888}TOTAL: ${color #CCCCCC}${totaldown enp5s0}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup enp5s0}
+${voffset 4}${color #CCCCCC}Interface ${color #6666FF}enp24s0 ${alignr}${color #CCCCCC}IP: ${color #6666FF}${addr enp24s0}
+${voffset 4}${color #888888}${downspeedgraph enp24s0 15,128 0000ff ff0000}${color #888888}${alignr}${upspeedgraph enp24s0 15,128 0000ff ff0000}
+${color #888888}DOWN: ${color #CCCCCC}${downspeed enp24s0}/s${alignr}${color #888888}UP: ${color #CCCCCC}${upspeed enp24s0}/s
+${color #888888}TOTAL: ${color #CCCCCC}${totaldown enp24s0}${alignr}${color #888888}TOTAL: ${color #CCCCCC}${totalup enp24s0}
 ]]

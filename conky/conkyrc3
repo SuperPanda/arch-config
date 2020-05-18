@@ -21,9 +21,9 @@ double_buffer = true,
 
 -- Minimum size of text area
 minimum_width = 256,
-minimum_height = 5,
+minimum_height = 256,
 border_outer_margin = 16,
-border_inner_margin = 32,
+border_inner_margin = 16,
 -- Draw shades?
 draw_shades = true,
 
@@ -47,21 +47,20 @@ default_shade_color = "white",
 default_outline_color = "black",
 
 -- Text alignment, other possible values are commented
--- alignment top_left
 alignment = "top_right",
 -- alignment bottom_left
 -- alignment bottom_right
 -- alignment bottom_middle
--- Gap between borders of screen and text
 
-gap_x = 400,
+-- Gap between borders of screen and text
+gap_x = 64,
 gap_y = 64,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
-use_spacer = "none",
+use_spacer = "right",
 
 -- Subtract file system buffers from used memory?
-no_buffers =  true,
+no_buffers = true,
 
 -- set to yes if you want all text to be in uppercase
 uppercase = false
@@ -71,5 +70,5 @@ uppercase = false
 conky.text = [[
 ${color 00ff00}${font DejaVu Sans Mono:size=36}${alignc}${time %k:%M:%S}
 ${color 00ff00}${font DejaVu Sans Mono:size=24}${alignc}${time %a %d-%b %Y}
-${voffset 32}${color orange}${font DejaVu Sans Mono:size=20}${alignc}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color #6666FF}'"$DJS"'$color'/}${voffset -24}
+${voffset 48}${font DejaVu Sans Mono :size=24}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS\b"/'\1${color #6666FF}'"$DJS"'${color 00ff00}'/}
 ]]

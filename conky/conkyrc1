@@ -6,16 +6,11 @@ cpu_avg_samples = 2,
 net_avg_samples = 2,
 temperature_unit = "celsius",
 double_buffer = true,
--- no_buffers = true
 text_buffer_size = 2048,
-gap_x = 36,
-gap_y = 36,
--- minimum_size 480 1
--- maximum_width 304
--- on_bottom = true,
+gap_x = 64,
+gap_y = 64,
 own_window = true,
 own_window_transparent = false,
--- own_window_color = 'black',
 own_window_argb_visual = true,
 own_window_class = 'Conky',
 own_window_type = 'override',
@@ -25,7 +20,7 @@ own_window_hints = "undecorated,sticky,skip_taskbar,skip_pager",
 border_width = 0,
 border_inner_margin = 32,
 border_outer_margin = 16,
-alignment = "top_right",
+alignment = "bottom_right",
 draw_shades = true,
 draw_outline = true,
 draw_borders = true,
@@ -42,10 +37,18 @@ default_shade_color = "black",
 -- default_outline_color = "black",
 color0 = "white"
 }
-conky.text = [[
-${battery_bar 30,66}
-${voffset -6}${color0}${alignc}BAT${color}
+-- ${battery_bar 30,66}
+-- ${voffset -6}${color0}${alignc}BAT${color}
 
+-- ${cpugraph cpu5 30,66}
+-- ${voffset -10}${color0}${alignc}CPU5${color}
+-- ${cpugraph cpu6 30,66}
+-- ${voffset -10}${color0}${alignc}CPU6${color}
+-- ${cpugraph cpu7 30,66}
+-- ${voffset -10}${color0}${alignc}CPU7${color}
+-- ${cpugraph cpu8 30,66}
+-- ${voffset -10}${color0}${alignc}CPU8${color}
+conky.text = [[
 ${cpugraph cpu1 30,66}
 ${voffset -10}${color0}${alignc}CPU1${color}
 ${cpugraph cpu2 30,66}
@@ -54,14 +57,7 @@ ${cpugraph cpu3 30,66}
 ${voffset -10}${color0}${alignc}CPU3${color}
 ${cpugraph cpu4 30,66}
 ${voffset -10}${color0}${alignc}CPU4${color}
-${cpugraph cpu5 30,66}
-${voffset -10}${color0}${alignc}CPU5${color}
-${cpugraph cpu6 30,66}
-${voffset -10}${color0}${alignc}CPU6${color}
-${cpugraph cpu7 30,66}
-${voffset -10}${color0}${alignc}CPU7${color}
-${cpugraph cpu8 30,66}
-${voffset -10}${color0}${alignc}CPU8${color}
+
 ${voffset -6}
 
 ${diskiograph_read 30,66}

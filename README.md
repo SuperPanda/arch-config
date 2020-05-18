@@ -1,6 +1,9 @@
 # arch-config
 
-## Get list of vim dependencies
+## Links
+https://github.com/nvm-sh/nvm/blob/master/README.md
+
+## Get list of vim dependencies (superceded with nvim)
 ```
 cd ~/.vim/pack/bundle/start
 find -name .git -print -execdir git --git-dir={}/ --work-tree=$PWD/{} remote show origin \; > /tmp/vimbundles.tmp
@@ -44,3 +47,8 @@ pacman -U <the-package.tar.xz>
 # Vagrant
 vagrant plugin install vagrant-libvirt
 vagrant up --provider=libvirt
+
+# tmux
+
+# neovim shortcuts
+
