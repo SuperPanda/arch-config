@@ -68,7 +68,7 @@ alignment = "bottom_left",
 -- Gap between borders of screen and text
 
 gap_x = 64,
-gap_y = 64,
+gap_y = 20,
 
 -- Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer = "none",

@@ -50,16 +50,67 @@ color0 = "white"
 -- ${voffset -10}${color0}${alignc}CPU8${color}
 conky.text = [[
 ${cpugraph cpu1 30,66}
-${voffset -10}${color0}${alignc}CPU1${color}
+${voffset -10}${color0}${alignc}CPU1${color} 
 ${cpugraph cpu2 30,66}
 ${voffset -10}${color0}${alignc}CPU2${color}
 ${cpugraph cpu3 30,66}
 ${voffset -10}${color0}${alignc}CPU3${color}
 ${cpugraph cpu4 30,66}
 ${voffset -10}${color0}${alignc}CPU4${color}
+${cpugraph cpu5 30,66}
+${voffset -10}${color0}${alignc}CPU5${color}
+${cpugraph cpu6 30,66}
+${voffset -10}${color0}${alignc}CPU6${color}
+${cpugraph cpu7 30,66}
+${voffset -10}${color0}${alignc}CPU7${color}
+${cpugraph cpu8 30,66}
+${voffset -10}${color0}${alignc}CPU8${color}
+${cpugraph cpu9 30,66}
+${voffset -10}${color0}${alignc}CPU9${color}
+${cpugraph cpu10 30,66}
+${voffset -10}${color0}${alignc}CPU10${color}
+${cpugraph cpu11 30,66}
+${voffset -10}${color0}${alignc}CPU11${color}
+${cpugraph cpu12 30,66}
+${voffset -10}${color0}${alignc}CPU12${color}
+${cpugraph cpu13 30,66}
+${voffset -10}${color0}${alignc}CPU13${color}
+${cpugraph cpu14 30,66}
+${voffset -10}${color0}${alignc}CPU14${color}
+${cpugraph cpu15 30,66}
+${voffset -10}${color0}${alignc}CPU15${color}
+${cpugraph cpu16 30,66}
+${voffset -10}${color0}${alignc}CPU16${color}
+${cpugraph cpu17 30,66}
+${voffset -10}${color0}${alignc}CPU17${color}
+${cpugraph cpu18 30,66}
+${voffset -10}${color0}${alignc}CPU18${color}
+${cpugraph cpu19 30,66}
+${voffset -10}${color0}${alignc}CPU19${color}
+${cpugraph cpu20 30,66}
+${voffset -10}${color0}${alignc}CPU20${color}
+${cpugraph cpu21 30,66}
+${voffset -10}${color0}${alignc}CPU21${color}
+${cpugraph cpu22 30,66}
+${voffset -10}${color0}${alignc}CPU22${color}
+${cpugraph cpu23 30,66}
+${voffset -10}${color0}${alignc}CPU23${color}
+${cpugraph cpu24 30,66}
+${voffset -10}${color0}${alignc}CPU24${color}
+
+
+
+
+
+
+
+
+
+
+
+
 
 ${voffset -6}
-
 ${diskiograph_read 30,66}
 ${voffset -10}${color0}${alignc}READ${color}
 ${diskiograph_write 30,66}
